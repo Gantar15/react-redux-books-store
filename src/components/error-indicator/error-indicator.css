@@ -1,0 +1,21 @@
+
+.error-indicator{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(243, 146, 55);
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.error-mess{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.error-indicator img{
+    margin-top: -12px;
+    width: 120px;
+    object-fit: cover;
+}
