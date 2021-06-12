@@ -1,11 +1,10 @@
 import BookList from '../book-list';
-import {withBookstoreService} from '../hoc';
 
 
-const HomePage = ({bookstoreService}) => {
+const HomePage = () => {
     return (
-        <BookList books={bookstoreService.getBooks()}/>
+        <BookList/>
     );
 };
 
-export default withBookstoreService(HomePage);
+export default HomePage;

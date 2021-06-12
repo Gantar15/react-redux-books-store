@@ -1,15 +1,29 @@
+import { Fragment } from 'react';
 import {Route, Switch} from 'react-router-dom';
+import {connect} from 'react-redux';
+
 import {HomePage, CartPage} from '../pages';
+import ShopHeader from '../shop-header';
+
 import './app.css';
 
 
-const App = () => {
+const App = ({cartTotal, numItems}) => {
     return (
-        <Switch>
-            <Route path="/" exact component={HomePage}/>
-            <Route path="/cart" component={CartPage}/>
-        </Switch>
+        <Fragment>
+            <ShopHeader numItems={numItems} total={cartTotal}/>
+            <Switch>
+                <Route path="/" exact component={HomePage}/>
+                <Route path="/cart" component={CartPage}/>
+            </Switch>
+        </Fragment> 
     );
 };
 
-export default App;
+
+const mapStateToProps = ({cartTotal, cartItems}) => ({
+    cartTotal,
+    numItems: cartItems.reduce((all, {count}) => all+count, 0)
+});
+
+export default connect(mapStateToProps)(App);

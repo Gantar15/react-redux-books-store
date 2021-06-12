@@ -1,0 +1,9 @@
+.book-list {
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.book-list ul{
+    list-style: none;
+}

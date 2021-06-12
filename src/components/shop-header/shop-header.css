@@ -1,0 +1,38 @@
+.shop-header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.shop-header > a{
+  display: block;
+}
+
+.shop-header .logo {
+  font-size: 2rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding-left: 1rem;
+}
+
+.shop-header .shopping-cart {
+  text-decoration: none;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding-right: 1rem;
+}
+.shop-header .shopping-cart p{
+  color: black;
+  margin: 0;
+}
+
+.shop-header .shopping-cart .cart-icon {
+  font-size: 1.5rem;
+  color: cadetblue;
+  margin-right: 10px;
+}
+
