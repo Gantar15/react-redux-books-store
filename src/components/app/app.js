@@ -21,7 +21,7 @@ const App = ({cartTotal, numItems}) => {
 };
 
 
-const mapStateToProps = ({cartTotal, cartItems}) => ({
+const mapStateToProps = ({shoppingCart: {cartTotal, cartItems}}) => ({
     cartTotal,
     numItems: cartItems.reduce((all, {count}) => all+count, 0)
 });
